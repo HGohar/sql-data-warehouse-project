@@ -1,0 +1,55 @@
+
+/*
+========================================================
+Create Database and Schemas
+========================================================
+
+Script Purpose:
+This script creates a new SQL Server database named 'DataWarehouse'.
+If the database already exists, it will be dropped and recreated.
+After the database is created, three schemas are initialized:
+    - bronze
+    - silver
+    - gold
+
+These schemas are intended to support a layered data architecture,
+commonly used in data warehousing and analytics solutions.
+
+WARNING:
+Running this script will DROP the entire 'DataWarehouse' database
+if it already exists.
+
+All existing data, objects, and configurations within the database
+will be permanently deleted.
+
+Proceed with extreme caution and ensure that appropriate backups
+have been taken before executing this script.
+========================================================
+*/
+
+USE master;
+GO
+
+--Drop and recreate the "DataWarehouse" database
+
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+BEGIN
+	ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+	DROP DATABASE DataWarehouse
+END;
+GO
+
+--Create the "DataWarehouse" database
+
+CREATE DATABASE DataWarehouse; 
+GO
+USE DataWarehouse;
+GO
+
+--Create Schemas
+CREATE SCHEMA bronze;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
+GO
