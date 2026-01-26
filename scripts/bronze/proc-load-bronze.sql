@@ -1,6 +1,6 @@
 /*
 =====================================
-DDL SCRIPT: CREATE BRONZE LAYER
+STORED PROCEDURE: LOAD BRONZE LAYER
 =====================================
 
 */
