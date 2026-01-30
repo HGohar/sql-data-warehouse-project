@@ -1,7 +1,9 @@
 /*
 =====================================
-DDL SCRIPT: CREATE SILVER LAYER
+DDL SCRIPT: CREATE SILVER TABLES
 =====================================
+Script Purpose: 
+Creates tables in the silver schema. If the tables already exist, they are dropped and recreated.
 
 */
 
