@@ -1,8 +1,9 @@
 /*
 =====================================
-DDL SCRIPT: CREATE BRONZE LAYER
+DDL SCRIPT: CREATE BRONZE TABLE
 =====================================
-
+Script Purpose: 
+Creates tables in the bronze schema. If the tables already exist, they are dropped and recreated.
 */
 
 
