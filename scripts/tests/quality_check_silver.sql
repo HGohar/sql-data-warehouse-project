@@ -1,6 +1,23 @@
+/*
+==============================================================================
+Quality Checks
+==============================================================================
+
+Script Purpose:
+This script performs various checks for data consistency, accuracy, and standardization across the silver schema. It includes checks for:
+	-Null or duplicate primary keys.
+	-Unwanted spaces in string fields.
+	-Data standardization and consistency.
+	Invalid data ranges and orders.
+	-Data consistency between related fields.
+Usage Notes:
+	-Run these checks after loading the data into the silver layer.
+	-Investigate and resolve any discrepancies found during the checks.
+*/
+
 
 /*  =======================
-	Normalization and standartization table silver.crm_cust_info
+	Normalization and standardization table silver.crm_cust_info
 	==========================
 */
 --Check for Nulls or Duplicates in Primary Key
@@ -33,7 +50,7 @@ FROM silver.crm_cust_info
 
 
 /*  =======================
-	Normalization and standartization table silver.crm_prd_info
+	Normalization and standardization table silver.crm_prd_info
 	==========================
 */
 
@@ -73,7 +90,7 @@ WHERE prd_start_dt > prd_end_dt
 
 
 /*  =======================
-	Normalization and standartization table silver.crm_sales_details
+	Normalization and standardization table silver.crm_sales_details
 	==========================
 */
 SELECT 
@@ -133,7 +150,7 @@ ORDER BY [sls_sales], [sls_quantity], [sls_price]
 
 
 /*  =======================
-	Normalization and standartization table silver.erp_cust_az12
+	Normalization and standardization table silver.erp_cust_az12
 	==========================
 */
 
@@ -150,7 +167,7 @@ gen
 FROM silver.erp_cust_az12
   
 /*  =======================
-	Normalization and standartization table silver.erp_loc_a101
+	Normalization and standardization table silver.erp_loc_a101
 	==========================
 */
 
@@ -170,7 +187,7 @@ END AS cntry
 FROM silver.erp_loc_a101
 
 /*  =======================
-	Normalization and standartization table silver.erp_px_cat_g1v2
+	Normalization and standardization table silver.erp_px_cat_g1v2
 	==========================
 
 */
