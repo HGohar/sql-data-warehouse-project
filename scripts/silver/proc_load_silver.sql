@@ -128,7 +128,7 @@ BEGIN
             sls_ord_num,   
             sls_prd_key,  
             sls_cust_id, 
-            sls_oder_dt,
+            sls_order_dt,
             sls_ship_dt,  
             sls_due_dt,  
             sls_sales,    
