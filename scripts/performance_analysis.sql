@@ -1,5 +1,5 @@
---Analize the yaerly performance of products by comaparing each product's sales to 
---both the avarage sales performance of the product and the previous year's sales
+--Analyze the yearly performance of products by comparing each product's sales to 
+--both the average sales performance of the product and the previous year's sales
 
 WITH yearly_product_sales AS (
 
